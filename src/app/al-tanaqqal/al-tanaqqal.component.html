@@ -1,0 +1,113 @@
+<div #viewport class="blox-snippet-page">
+  <aside [mdcDrawerContainer]="drawerType" [(open)]="open">
+    <nav mdcDrawer>
+      <div mdcDrawerToolbarSpacer *ngIf="toolbarSpacer"></div>
+      <div mdcDrawerHeader *ngIf="toolbarHeader">
+        <div mdcDrawerHeaderContent>O Bloco de Eu Sozinho</div>
+      </div>
+      <div mdcDrawerContent mdcListGroup>
+        <nav mdcList (click)="toggleDrawer()">
+          <a mdcListItem routerLink="/novalis">
+            <i mdcListItemGraphic class="material-icons" aria-hidden="true">all_inclusive</i>One With Everything
+          </a>
+          <a mdcListItem routerLink="brecht">
+            <i mdcListItemGraphic class="material-icons" aria-hidden="true">directions_bike</i>Like the Doodah Man
+          </a>
+          <a mdcListItem routerLink="novalis">
+            <i mdcListItemGraphic class="material-icons" aria-hidden="true">beach_access</i>Cucamonga
+          </a>
+        </nav>
+
+        <hr mdcListDivider>
+        <nav mdcList (click)="toggleDrawer()">
+            <a mdcListItem routerLink="george">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_bar</i>Get Trashed
+            </a>
+            <a mdcListItem routerLink="/heine">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_library</i>Feed Your Head
+            </a>
+
+            <a mdcListItem routerLink="/george">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_bar</i>Stefan George
+            </a>
+            <a mdcListItem routerLink="/holderlin">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_library</i>Holderlin
+            </a>
+            <a mdcListItem routerLink="/heine">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_library</i>Heinrich Heine
+            </a>
+
+              <a mdcListItem routerLink="/kleist">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_bar</i>Kleist
+            </a>
+            <a mdcListItem routerLink="/rilke">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_library</i>Rainier Maria Rilke
+            </a>
+            <a mdcListItem routerLink="george">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_bar</i>Stefan George Again
+            </a>
+            <a mdcListItem routerLink="/schiller">
+              <i mdcListItemGraphic class="material-icons" aria-hidden="true">local_library</i>Gunther Schiller
+            </a>
+
+          </nav>
+        </div>
+    </nav>
+  </aside>
+  <div class="blox-demo-content">
+    <header mdcTopAppBar [viewport]="viewport" [fixedAdjust]="content">
+      <div mdcTopAppBarRow>
+        <section mdcTopAppBarSection alignStart>
+          <button mdcTopAppBarNavIcon class="material-icons" (click)="toggleDrawer()">menu</button>
+          <i class="fas fa-sun fa-2x"></i>
+          <span mdcTopAppBarTitle>{{drawerType | titlecase}}
+            Engenhoca Pata-Choca</span>
+        </section>
+      </div>
+    </header>
+
+    <main #content class="blox-demo-main">
+      <router-outlet></router-outlet>
+      <!-- <h1>{{drawerType | titlecase}} Drawer</h1>
+      <p>Click the menu icon above to {{open ? 'close' : 'open'}} the drawer, or use the controls below.</p>
+      <div mdcFormField>
+        <div mdcCheckbox>
+          <input mdcCheckboxInput type="checkbox" [(ngModel)]="open" />
+        </div>
+        <label mdcFormFieldLabel>Open drawer</label>
+      </div>
+      <br/>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="drawerType" value="persistent" [(ngModel)]="drawerType" />
+        </div>
+        <label mdcFormFieldLabel>Persistent Drawer</label>
+      </div>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="drawerType" value="temporary" [(ngModel)]="drawerType" />
+        </div>
+        <label mdcFormFieldLabel>Temporary Drawer</label>
+      </div>
+      <br/>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="headerType" value="none" [(ngModel)]="headerType" />
+        </div>
+        <label mdcFormFieldLabel>No Header</label>
+      </div>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="headerType" value="spacer" [(ngModel)]="headerType" />
+        </div>
+        <label mdcFormFieldLabel>Toolbar Spacer</label>
+      </div>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="headerType" value="header" [(ngModel)]="headerType" />
+        </div>
+        <label mdcFormFieldLabel>Header</label>
+      </div> -->
+    </main>
+  </div>
+</div>

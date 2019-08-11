@@ -1,0 +1,62 @@
+<div class="blox-snippet-page">
+  <nav mdcDrawer>
+    <div mdcDrawerToolbarSpacer *ngIf="toolbarSpacer"></div>
+    <div mdcDrawerHeader *ngIf="toolbarHeader">
+      <div mdcDrawerHeaderContent>
+        <i class="material-icons">restaurant</i>
+        &nbsp;O Cardápio</div>
+    </div>
+    <div mdcDrawerContent mdcList style="min-height: 100vh">
+      <a mdcListItem href="javascript:void(0)" routerLink="/rilke">
+        <i mdcListItemGraphic class="material-icons" aria-hidden="true">all_inclusive</i> Star Trek Discovery
+      </a>
+      <a mdcListItem href="javascript:void(0)">
+        <i mdcListItemGraphic class="material-icons" aria-hidden="true">free_breakfast</i>The Expanse
+      </a>
+      <a mdcListItem href="javascript:void(0)">
+        <i mdcListItemGraphic class="fas fa-sun fa-2x" aria-hidden="true"></i>The Handmaid's Tale
+      </a>
+      <a mdcListItem href="javascript:void(0)">
+        <i mdcListItemGraphic class="material-icons" aria-hidden="true">rowing  </i>The One Hundred
+      </a>
+      <a mdcListItem href="javascript:void(0)">
+        <i mdcListItemGraphic class="material-icons" aria-hidden="true">directions_boat</i>Man in the High Castle
+      </a>
+
+    </div>
+  </nav>
+  <div #viewport class="blox-demo-content">
+    <header mdcTopAppBar [viewport]="viewport" [fixedAdjust]="content">
+      <div mdcTopAppBarRow>
+        <section mdcTopAppBarSection alignStart>
+          <i class="fas fa-sun fa-2x fa-fw"></i>
+          <span mdcTopAppBarTitle>Gaveta Punheta MDC</span>
+        </section>
+      </div>
+    </header>
+
+    <main #content class="blox-demo-main">
+        <h1>Bildung Blox Revisited</h1>
+        <h2>Lateral Helmsmanship</h2>
+      <p>Reconfigure a gaveta, Beta</p>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="type" value="none" [(ngModel)]="headerType" />
+        </div>
+        <label mdcFormFieldLabel>No Header</label>
+      </div>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="type" value="spacer" [(ngModel)]="headerType" />
+        </div>
+        <label mdcFormFieldLabel>Toolbar Spacer</label>
+      </div>
+      <div mdcFormField>
+        <div mdcRadio>
+          <input mdcRadioInput type="radio" name="type" value="header" [(ngModel)]="headerType" />
+        </div>
+        <label mdcFormFieldLabel>Header</label>
+      </div>
+    </main>
+  </div>
+</div>

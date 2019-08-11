@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+}
+
+aside {
+  font-family: "News Cycle", sans-serif !important;
+  font-weight: 300 !important;
+  margin: 0px;
+}
+
+.blox-snippet-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    margin: 0x;
+}
+
+.mdc-drawer--temporary {
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0px;
+  }
+
+[mdcDrawerHeader], [mdcDrawerToolbarSpacer] {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+
+
+.blox-demo-content {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.blox-demo-main {
+    padding: 0px;
+    margin: 0px;
+}

@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+$mdc-theme-primary: #607d8b;
+$mdc-theme-secondary: #6699cc;
+$mdc-theme-background: #fff;
+
+// import theming for all mdc components:
+@import "material-components-web/material-components-web";

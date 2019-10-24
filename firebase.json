@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/bildung-blox-revisited",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
